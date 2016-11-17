@@ -32,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
         try {
             num1=Double.parseDouble(num1String);
             result=num1*num2;
+            
+            result*=100;
+            result=Math.round(result);
+            result/=100;
+
+
+
+
             resultView.setText(result+" PS");
         } catch (NumberFormatException e) {
             resultView.setText("WRONG INPUT!");
